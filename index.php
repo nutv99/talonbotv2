@@ -15,11 +15,11 @@ $arrayJson = json_decode($content, true);
     
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
-    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
+    $arrayHeader[] = "Authorization: Bearer " . $accessToken .'"';
     
     //รับข้อความจากผู้ใช้
 $message = $arrayJson['events'][0]['message']['text'];
-
+replyMsg($arrayHeader,$arrayPostData);
           
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
