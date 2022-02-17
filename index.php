@@ -7,8 +7,8 @@ $MessageInput = $sValue[0];
 $replyToken =  $sValue[1];  
 $userID = $sValue[2] ;
 $contact9 = $sValue[0] ;
-pushMessage($contact9,$access_token,$replyToken) ;  
-echo 'Hello Token' ;
+
+
 
 
 $arrayJson = json_decode($content, true);
@@ -20,7 +20,7 @@ $arrayJson = json_decode($content, true);
     //รับข้อความจากผู้ใช้
 $message = $arrayJson['events'][0]['message']['text'];
 
- 
+          
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
