@@ -11,14 +11,14 @@ $arrayJson = json_decode($content, true);
     //รับข้อความจากผู้ใช้
 $message = $arrayJson['events'][0]['message']['text'];
 
- if($message == "aa"){
+ 
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
-    }
+ 
 
 
 if($message == "video"){
